@@ -7,7 +7,7 @@
     align-items: center;
     height: 100%;
     flex-wrap: nowrap;
-		gap:6px;
+		gap:10px;
   }
 
   .c-gnav > .menu-item {
@@ -22,7 +22,14 @@
     justify-content: center;
     height: 100%;
     white-space: nowrap;
-    padding: 0 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: auto;
+    flex: 0 0 auto;
   }
 
   /* 空のリンク（教室紹介など）も同じ高さに揃える */
