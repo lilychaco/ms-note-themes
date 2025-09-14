@@ -1,0 +1,12 @@
+
+.top-lesson .p-postList.-type-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+	background-color: orange;
+}
+
+.top-lesson .p-postList.-type-card .p-postList__item {
+  background-color: #f0f0f0;
+	max-width: 200px;
+}

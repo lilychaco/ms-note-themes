@@ -1,0 +1,7 @@
+/* PCでは改行しない */
+.br-sp { display: none; }
+/* スマホだけ改行させる（幅は必要に応じて調整） */
+@media (max-width: 767px) {
+  .br-sp { display: inline; }
+}
+

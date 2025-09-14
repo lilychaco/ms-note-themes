@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/*
+ * モーダル関連スタイル
+ * Modal Styles
+ */
+
+/* ========== modal-access 共通 ========== */
+.modal-access {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-access__content {
+  background-color: #fff;
+  margin: 20px auto 0 auto;
+  padding: 20px;
+  padding-top: 40px;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-access__close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-access__close:hover,
+.modal-access__close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.modal-access__step {
+  margin-top: 20px;
+}
+
+.modal-access__images img {
+  width: 100%;
+}
+
+.modal-access__caption {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.modal-access__trigger {
+  color: #444;
+  font-weight: bold;
+}
+
+.modal-access__trigger--color {
+  color: #ff6f00;
+  font-weight: bold;
+}
+
+/* ========== modal-hankyu固有 ========== */
+.modal-hankyu__trigger {
+}
+
+.modal-hankyu__trigger--color {
+}
+
+.modal-hankyu__content {
+}
+
+.modal-hankyu__close {
+}
+
+.modal-hankyu__body {
+}
+
+.modal-hankyu__title {
+  font-weight: bold;
+}
+
+.modal-hankyu__images {
+}
+
+.modal-hankyu__step {
+}
+
+.modal-hankyu__img {
+}
+
+.modal-hankyu__caption {
+}
+
+/* ========== modal-jr固有 ========== */
+.modal-jr__trigger {
+}
+
+.modal-jr__trigger--color {
+}
+
+.modal-jr__content {
+}
+
+.modal-jr__close {
+}
+
+.modal-jr__body {
+}
+
+.modal-jr__title {
+}
+
+.modal-jr__description {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-jr__images {
+}
+
+.modal-jr__step {
+}
+
+.modal-jr__img {
+}
+
+.modal-jr__caption {
+}
+
+/* ========== modal-times固有 ========== */
+.modal-times__trigger {
+}
+
+.modal-times__trigger--color {
+}
+
+.modal-times__content {
+}
+
+.modal-times__close {
+}
+
+.modal-times__body {
+}
+
+.modal-times__title {
+}
+
+.modal-times__description {
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-times__images {
+}
+
+.modal-times__step {
+}
+
+.modal-times__img {
+}
+
+.modal-times__caption {
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .modal-access__content {
+    margin: 15% auto 0 auto;
+    width: 95%;
+    padding: 10px;
+  }
+}

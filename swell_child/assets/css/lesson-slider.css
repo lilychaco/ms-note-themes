@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+ * レッスンスライダー関連スタイル
+ * Lesson Slider Styles
+ */
+
+/*lesson-swiper画像とタイトルの隙間調整*/
+.lesson-swiper .swiper-slide img {
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* 追加：アスペクト比を固定（例：4:3） */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.post_content .lesson-swiper h3 {
+  margin-top: 0.5em;
+}

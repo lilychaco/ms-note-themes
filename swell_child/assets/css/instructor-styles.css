@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*
+ * 講師関連スタイル
+ * Instructor Styles
+ */
+
+/* メンバーカードデザイン - 講師一覧ページ*/
+
+.archive.post-type-archive-instructor .c-postMeta__subject,
+.single-instructor .c-postMeta__subject {
+  font-size: 18px;
+}
+
+.archive.post-type-archive-instructor .c-postMeta__subject > .c-postMeta__label,
+.single-instructor .c-postMeta__subject > .c-postMeta__label {
+  font-size: 12px !important;
+  color: #999;
+}
+
+/* instructor用だけ縦長2:3（トップページ用・SWELLの標準構造） */
+.instructor-item .c-postThumb__figure {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+.instructor-item .c-postThumb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 講師アーカイブページの画像サイズ統一 */
+/* アーカイブのサムネイルは archive-instructor.css に集約 */
+
+/* アーカイブのサムネイル画像は archive-instructor.css に集約 */
+
+/* アーカイブのホバー拡大は archive-instructor.css に集約 */
+
+/* 講師アーカイブページのカード全体のスタイルは archive-instructor.css に集約 */
+
+/* 科目別表示のグリッドは archive-instructor.css / tax-instructor.css に集約 */
+
+/* アーカイブのカード外観は archive-instructor.css に集約 */
+
+/* アーカイブのホバーは archive-instructor.css に集約 */
+
+/* アーカイブのタイトルは archive-instructor.css に集約 */
+
+/* 講師フィルタリングエリア */
+/* ※ 未使用のフィルタUIスタイルを削除 */
+
+/* 表示切り替えボタンは archive-instructor.css に集約 */
+
+/* 教室別表示 */
+/* ※ 未使用の教室フィルタスタイルを削除 */
+
+/* 講師カードに教室情報を追加 */
+.p-postList__schools {
+  padding: 8px 12px 12px 12px;
+}
+
+.p-postList__school-tag {
+  display: inline-block;
+  background-color: #f0f8e6;
+  color: #7ab000;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #d4e9c4;
+}
+
+/* 関連記事の画像を顔中心に表示 */
+.single-instructor .p-relatedPosts .c-postThumb__img.u-obf-cover {
+  object-position: center 30%;
+}
+
+/* 可愛いページネーションデザイン */
+/* ※ 未使用のWPデフォルトページネーション装飾を削除 */
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  /* アーカイブのSPスタイルは archive-instructor.css に集約 */
+
+  .single-instructor .p-articleThumb {
+    max-width: 300px;
+    margin-bottom: 25px;
+  }
+
+  .single-instructor .p-articleThumb__img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .instructor-filters__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instructor-subject-section__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  /* アーカイブのSPグリッドは archive-instructor.css に集約 */
+
+  .p-postList__school-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    padding: 3px 6px;
+  }
+
+  .single-instructor .p-relatedPosts .c-postThumb__img.u-obf-cover {
+    object-position: center 25%;
+  }
+
+  /* ※ 未使用のWPデフォルトページネーション装飾を削除（SP） */
+}
+
+@media (max-width: 480px) {
+  /* アーカイブのSPレイアウトは archive-instructor.css に集約 */
+
+  .single-instructor .p-articleThumb {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .single-instructor .p-articleThumb__img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .instructor-display-toggle__button.active:hover {
+    background-color: #7ab000;
+    box-shadow: 0 6px 16px rgba(140, 196, 0, 0.4);
+  }
+  /* アーカイブのSPグリッドは archive-instructor.css に集約 */
+
+  .instructor-subject-section__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  .single-instructor .p-relatedPosts .c-postThumb__img.u-obf-cover {
+    object-position: center 20%;
+  }
+}
+
+/* 講師カードの基本レイアウトを確実に適用 */
+.archive.post-type-archive-instructor .p-postList__item {
+  width: 100%;
+  max-width: 260px;
+  margin: 0;
+  flex: none;
+}
+
+/* 講師個別ページのアイキャッチ画像 */
+.single-instructor .p-articleThumb {
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.single-instructor .p-articleThumb__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.single-instructor .p-articleThumb:hover .p-articleThumb__img {
+  transform: scale(1.05);
+}
+
+.single-instructor .l-mainContent__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.single-instructor .post_content {
+  text-align: center;
+}
+
+/* トップページの講師カードエリア*/
+.p-postList.-type-card {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* トップページの講師カード */
+.p-postList__item.instructor-item {
+  max-width: 260px;
+}
+.p-postList__item.instructor-item .c-postThumb__figure {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.p-postList__item.instructor-item .p-postList__body {
+  padding: 10px;
+}
+
+/* 他講師のカードエリア */
+.p-postList.p-relatedPosts.-type-card {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  gap: 0; /* トップページの講師カードエリアのgapを0にする*/
+}
+.p-postList.p-relatedPosts.-type-card .p-postList__item {
+  max-width: 220px;
+}
+
+/* taxページ向けの余白は tax-instructor.css へ移行 */

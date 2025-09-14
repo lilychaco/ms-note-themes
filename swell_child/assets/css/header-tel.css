@@ -1,0 +1,181 @@
+/* ==========================================
+   ヘッダー電話番号表示専用CSS
+   ========================================== */
+
+/* PC版ヘッダー電話番号 */
+.tel_gt {
+  text-align: center;
+}
+
+.tel_gt__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tel_gt__link:hover {
+  opacity: 0.8;
+}
+
+.tel_gt__hours {
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.tel_gt__indent {
+  margin-left: 4.5em;
+  display: inline-block;
+}
+
+/* 1119px以下のタブレット・小型PC対応 */
+@media (max-width: 1119px) {
+  .tel_gt__link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #04384c;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+
+  .tel_gt__hours {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+
+  .tel_gt__indent {
+    margin-left: 3.5em;
+  }
+
+  /* ヘッダー内のウィジェットエリアの高さを制限 */
+  .w-header {
+    max-height: 80px;
+    overflow: hidden;
+  }
+
+  .w-header__inner {
+    padding: 8px 0;
+  }
+}
+
+/* 900px以下でさらに小さく */
+@media (max-width: 900px) {
+  .tel_gt__link {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .tel_gt__hours {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-top: 4px;
+  }
+
+  .tel_gt__indent {
+    margin-left: 3em;
+  }
+
+  .w-header {
+    max-height: 70px;
+  }
+}
+
+/* スマートフォン対応 */
+@media (max-width: 767px) {
+  .tel_gt__link:active {
+    opacity: 0.6;
+  }
+
+  .tel_gt__link {
+    cursor: pointer;
+  }
+
+  .tel_gt__hours {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .tel_gt__indent {
+    margin-left: 4em;
+  }
+}
+
+@media (min-width: 768px) {
+  .tel_gt__hours {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* SP版はウィジェットで対応するため、PC版のみのスタイルとして残します */
+
+/* ==========================================
+   SP版ヘッダー下ウィジェットエリア
+   ========================================== */
+
+/* SP版ヘッダー下エリア */
+.l-spHeaderBottom {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.w-spHeaderBottom {
+  margin: 0;
+}
+
+.w-spHeaderBottom__title {
+  display: none; /* タイトルは表示しない */
+}
+
+/* SP版電話番号テキスト */
+.l-spHeaderBottom .tel_gt__sp-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #04384c;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.l-spHeaderBottom .tel_gt__sp-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.l-spHeaderBottom .tel_gt__sp-link:hover {
+  opacity: 0.8;
+}
+
+.l-spHeaderBottom .tel_gt__sp-link:active {
+  opacity: 0.6;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+  .l-spHeaderBottom .tel_gt__sp-text {
+    font-size: 14px;
+  }
+
+  .l-spHeaderBottom {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .l-spHeaderBottom .tel_gt__sp-text {
+    font-size: 13px;
+  }
+}
+
+/* PC版では非表示 */
+@media (min-width: 960px) {
+  .l-spHeaderBottom {
+    display: none;
+  }
+}
+

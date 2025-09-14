@@ -1,0 +1,114 @@
+/* =======================
+   PC版ヘッダー内ウィジェットエリア
+   =======================*/
+
+.header-sns {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+}
+
+.header-sns__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-sns__link + .header-sns__link {
+  margin-left: 12px; /* お好みで10pxや12pxに */
+}
+.header-sns__icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 1200px) {
+	.l-header__inner.l-container {
+	padding:0 10px;
+}
+.header-sns {
+	min-width: 56px;
+}
+  .header-sns__link {
+    margin-left: 0;
+  }
+.header-sns__link + .header-sns__link {
+  margin-left: 8px; /* お好みで10pxや12pxに */
+}
+
+  .header-sns__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 1044px) {
+	.l-header__inner.l-container {
+	padding:0 10px;
+}
+.header-sns {
+	flex-shrink: 0;
+    min-width: 60px;
+}
+  .header-sns__link {
+    margin-left: 0;
+  }
+.header-sns__link + .header-sns__link {
+  margin-left: 8px; /* お好みで10pxや12pxに */
+}
+
+  .header-sns__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* =======================
+   SP版ヘッダー下ウィジェットエリア
+   =======================*/
+.header-under-sp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding:0 20px;
+	height:100%;
+}
+.header-under-sp .header-tel {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-under-sp .header-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+	height:100%;
+}
+
+.header-under-sp .header-sns__link {
+  margin-left: 12px;
+}
+
+.header-under-sp .header-sns__icon {
+  width: 30px;
+  height: 30px;
+	aspect-ratio: 1/1;
+	min-width: 30px;
+}
+
+.tel-gt-sp-link {
+	color:#333;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .header-under-sp .header-sns__link {
+    margin-left: 8px;
+  }
+
+  .header-under-sp .header-sns__icon {
+    width: 20px;
+		min-width: 20px;
+    height: 20px;
+  }
+}

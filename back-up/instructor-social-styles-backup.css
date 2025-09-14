@@ -1,0 +1,63 @@
+/*
+ * 講師カード ソーシャル機能関連CSS - バックアップ
+ * 将来的にソーシャルメディアリンク機能を実装する際に使用
+ * 作成日: 2025年1月
+ */
+
+/* ソーシャルボタンコンテナ（ホバー時にオーバーレイ表示） */
+.archive.post-type-archive-instructor .p-postList__socials,
+.tax-instructor_school .p-postList__socials,
+.tax-instructor_subject .p-postList__socials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ソーシャルリンクボタン */
+.archive.post-type-archive-instructor .p-postList__social-link,
+.tax-instructor_school .p-postList__social-link,
+.tax-instructor_subject .p-postList__social-link {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ホバー時の画像スケールエフェクト */
+.archive.post-type-archive-instructor .p-postList:hover .p-postList__image,
+.tax-instructor_school .p-postList:hover .p-postList__image,
+.tax-instructor_subject .p-postList:hover .p-postList__image {
+  transform: scale(0.9);
+}
+
+/* ホバー時のソーシャルボタン表示 */
+.archive.post-type-archive-instructor .p-postList:hover .p-postList__socials,
+.tax-instructor_school .p-postList:hover .p-postList__socials,
+.tax-instructor_subject .p-postList:hover .p-postList__socials {
+  opacity: 1;
+}
+
+/*
+ * 使用方法例:
+ *
+ * HTMLに以下のような構造を追加:
+ * <div class="p-postList__socials">
+ *   <a href="https://facebook.com/instructor" class="p-postList__social-link">
+ *     <i class="fab fa-facebook"></i>
+ *   </a>
+ *   <a href="https://twitter.com/instructor" class="p-postList__social-link">
+ *     <i class="fab fa-twitter"></i>
+ *   </a>
+ * </div>
+ */

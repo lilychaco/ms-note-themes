@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/*
+ * 固定ページ固有スタイル
+ * Page Specific Styles
+ */
+
+/* 会社概要ページ */
+[data-postid="299"] .post_content {
+  background-color: #f9f9f9; /* ← お好みの色に変更 */
+}
+
+/* 代表挨拶 */
+.greetings {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: #f9f9f9;
+}
+
+.president-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  padding-right: 20px;
+}
+
+/* 教室情報テーブル */
+.school-info {
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.school-info__item {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #ddd;
+  padding: 0;
+  gap: 0;
+  align-items: stretch; /* 高さを揃える */
+}
+
+.school-info__item:first-child {
+  border-top: none;
+}
+
+.school-info__label {
+  flex: 0 0 120px;
+  font-weight: bold;
+  color: #333;
+  border-right: 1px solid #ddd;
+  padding: 12px;
+}
+
+.school-info__content {
+  flex: 1;
+  color: #555;
+  line-height: 1.6;
+  padding: 12px;
+}
+
+/* privacy policy */
+.privacy_contents {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+}
+
+/* faq */
+.faq-accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-accordion .swell-block-accordion__title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f6faef !important;
+}
+
+.faq-accordion .swell-block-accordion .swell-block-accordion__body {
+}
+
+/* 採用情報 */
+.recruit-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.recruit-table__heading {
+  background-color: #e5e5e5;
+  font-weight: bold;
+  padding: 16px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+.recruit-table__row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.recruit-table__cell {
+  padding: 12px 16px;
+  flex: 1;
+  font-size: 14px;
+}
+
+.recruit-table__cell--title {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  flex: 0 0 150px;
+  text-align: left;
+  border-right: 1px solid #ddd;
+}
+
+.recruit-table__entry-link {
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.recruit-table__link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #333;
+  transition: all 0.3s ease;
+}
+
+.recruit-table__link:hover {
+  color: #0078d4;
+  border-color: #0078d4;
+}

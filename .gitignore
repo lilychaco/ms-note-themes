@@ -1,0 +1,47 @@
+# Backup files
+*~
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.tmp
+
+# WordPress backup files
+wp-config-backup.php
+*.sql
+*.sql.gz
+
+# Theme backups
+*-backup/
+backup-*/
+
+# Twentytwentyfive theme
+twentytwentyfive/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+error_log
+debug.log
+
+# Node modules (if any)
+node_modules/
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar

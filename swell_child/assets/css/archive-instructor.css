@@ -1,0 +1,300 @@
+/* 表示切り替えボタン 必須*/
+.instructor-display-toggle {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.instructor-display-toggle__button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 8px;
+  border: 2px solid #8cc400;
+  background-color: #fff;
+  color: #8cc400;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.instructor-display-toggle__button:hover {
+  background-color: #f8fdf0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(140, 196, 0, 0.2);
+}
+
+.instructor-display-toggle__button.active {
+  background-color: #8cc400;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(140, 196, 0, 0.3);
+}
+
+.instructor-display-toggle__button.active:hover {
+  background-color: #7ab000;
+  box-shadow: 0 6px 16px rgba(140, 196, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .instructor-display-toggle {
+    padding: 15px;
+  }
+
+  .instructor-display-toggle__button {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    padding: 10px 20px;
+    margin: 8px 4px;
+  }
+
+  .instructor-display-toggle__button:hover {
+    background-color: #f8fdf0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(140, 196, 0, 0.2);
+  }
+
+  .instructor-display-toggle__button.active:hover {
+    background-color: #7ab000;
+    box-shadow: 0 6px 16px rgba(140, 196, 0, 0.4);
+  }
+}
+
+@media (max-width: 480px) {
+  .instructor-display-toggle__button {
+    display: block;
+    width: 200px;
+    margin: 8px auto;
+  }
+
+  .instructor-display-toggle__button:hover {
+    background-color: #f8fdf0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(140, 196, 0, 0.2);
+  }
+
+  .instructor-display-toggle__button.active:hover {
+    background-color: #7ab000;
+    box-shadow: 0 6px 16px rgba(140, 196, 0, 0.4);
+  }
+}
+
+/* ここまで必須 表示切り替えボタン */
+
+/* 講師一覧科目別表示 */
+.instructor-subject-section {
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 40px 0 40px;
+}
+
+.instructor-subject-section__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin-top: 0;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #8cc400;
+  position: relative;
+}
+
+/* ----------------------------------------
+ * 講師カード共通スタイル（一覧 & 科目別）
+ * 対象：.p-postList.-instructor
+ * ---------------------------------------- */
+
+/* 講師アーカイブページのタブ一覧表示のカード全体のスタイル */
+/* 講師アーカイブ これがないと科目別でも一覧でも、横2列の並びになる */
+.archive.post-type-archive-instructor .p-postList,
+.instructor-archive .p-postList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 260px));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0;
+  justify-content: center;
+  align-items: end;
+  grid-auto-rows: 1fr;
+}
+
+/* タブ一覧表示の講師カード */
+/* これがないと一覧表時で名前と教室名が表示されない*/
+.instructor-archive .p-postList__item .p-postList__item-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ショートコードの講師カード本体 */
+.instructor-archive .p-postList__item {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative; /* アブソリュートなリンクの基準をカードに限定 */
+}
+
+.instructor-archive .p-postList__item .p-postList__item-link {
+  background-color: transparent;
+}
+
+/* 以下サムネイルが、archive-lesson.cssで使用している */
+/* サムネイル */
+.p-archiveContent .p-postList__thumb {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-archiveContent .p-postList__thumb img {
+  width: 100%;
+  max-width: 260px;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 8px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+/* サムネイルが、archive-lesson.cssで使用しているここまで*/
+
+/* 以下でインストラクターページでは、サムネイルの幅を100％にして大きく表示させる*/
+.p-archiveContent .p-postList.-instructor .p-postList__thumb,
+.instructor-archive .p-postList.-instructor .p-postList__thumb {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-height: 260px;
+  aspect-ratio: 3 / 4;
+}
+
+.p-postList.-instructor .p-postList__thumb img {
+  width: 100%;
+  height: auto; /* 変更ポイント */
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.p-archiveContent
+  .p-postList.-instructor
+  .p-postList__item:hover
+  .p-postList__thumb
+  img,
+.instructor-archive
+  .p-postList.-instructor
+  .p-postList__item:hover
+  .p-postList__thumb
+  img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* タイトル・教室名 科目別・一覧ともに共通*/
+.p-postList.-instructor .p-postList__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  padding: 12px 6px;
+  text-align: center;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.p-postList.-instructor .p-postList__schools {
+  padding: 0 6px 16px;
+  text-align: center;
+}
+
+.p-postList.-instructor .p-postList__school-tag {
+  display: inline-block;
+  background-color: #f0f8e6;
+  color: #7ab000;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #d4e9c4;
+}
+
+/* ==========================================================
+   ページネーション（講師一覧と同じデザイン）
+  ========================================================== */
+.p-archiveContent .p-paginationNav {
+  box-shadow: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.p-archiveContent .p-paginationNav ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.p-paginationNav ul.page-numbers li {
+  background-color: transparent;
+  border-radius: 0;
+  display: flex;
+}
+
+.p-paginationNav ul.page-numbers li .page-numbers {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  color: #8cc400;
+  border: 2px solid #8cc400;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-paginationNav ul.page-numbers li a.page-numbers:hover {
+  background-color: #c4efd7;
+  transform: translateY(-2px);
+}
+
+.p-paginationNav ul.page-numbers li span.page-numbers.current {
+  background-color: #8cc400;
+  color: white;
+  pointer-events: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}

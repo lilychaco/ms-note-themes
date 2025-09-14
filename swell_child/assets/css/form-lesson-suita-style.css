@@ -1,0 +1,547 @@
+/* フォーム全体のスタイル */
+.form-table {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 各フォーム項目の間隔 */
+.form-row {
+  margin-top: 24px;
+}
+
+.form-row:first-child {
+  margin-top: 0;
+}
+
+/* ラベルのスタイル */
+.form-row label {
+  display: block;
+  margin-top: 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 必須マークのスタイル */
+.required {
+  color: #e74c3c;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* 入力フィールド共通スタイル */
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #8cc400;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* プレースホルダーのスタイル */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* ラジオボタンとチェックボックスのスタイル */
+.wpcf7-radio,
+.wpcf7-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.wpcf7-list-item label:hover {
+  background-color: #f8f9fa;
+  border-color: #8cc400;
+}
+
+/* カスタムラジオボタンとチェックボックス */
+.wpcf7-list-item input[type="radio"],
+.wpcf7-list-item input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.wpcf7-list-item input[type="checkbox"] {
+  border-radius: 4px;
+}
+
+/* ラジオボタンの選択時スタイル */
+.wpcf7-list-item input[type="radio"]:checked {
+  border-color: #8cc400;
+  background-color: #8cc400;
+}
+
+.wpcf7-list-item input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* チェックボックスの選択時スタイル */
+.wpcf7-list-item input[type="checkbox"]:checked {
+  border-color: #8cc400;
+  background-color: #8cc400;
+}
+
+.wpcf7-list-item input[type="checkbox"]:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* ホバー時のスタイル */
+.wpcf7-list-item input[type="radio"]:hover,
+.wpcf7-list-item input[type="checkbox"]:hover {
+  border-color: #8cc400;
+  box-shadow: 0 0 0 2px rgba(140, 196, 0, 0.2);
+}
+
+/* 選択されたラベルのスタイル */
+.wpcf7-list-item:has(input[type="radio"]:checked) label,
+.wpcf7-list-item:has(input[type="checkbox"]:checked) label {
+  background-color: #f0f8e0;
+  border-color: #8cc400;
+  color: #2d5016;
+}
+
+/* 希望日のスタイル */
+.date-group {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #8cc400;
+}
+
+.date-group:first-child {
+  margin-top: 0;
+}
+
+.date-group strong {
+  display: block;
+  margin-top: 12px;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.date-group strong:first-child {
+  margin-top: 0;
+}
+
+/* 日付選択エリア - 基本スタイル */
+.date-select-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+  align-items: flex-end;
+}
+
+.date-select-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.date-select-item .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+
+.date-select-item select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.date-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* 体験レッスン希望コースのスタイル */
+.form-row:has([name="lesson-course"]) .wpcf7-radio,
+.form-row:has([name="lesson-course-shimamoto"]) .wpcf7-radio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+}
+
+.form-row:has([name="lesson-course"]) .wpcf7-list-item label,
+.form-row:has([name="lesson-course-shimamoto"]) .wpcf7-list-item label {
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+/* 送信ボタンのスタイル */
+.form-submit {
+  background-color: #8cc400;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.form-submit:hover {
+  background-color: #bcd400;
+}
+
+.form-submit:active {
+  transform: translateY(1px);
+}
+
+/* smallテキストのスタイル */
+small {
+  display: block;
+  margin-top: 8px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Contact Form 7のエラーメッセージスタイル */
+.wpcf7-not-valid-tip {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+.wpcf7-form-control.wpcf7-not-valid {
+  border-color: #e74c3c;
+}
+
+.wpcf7-response-output {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.wpcf7-mail-sent-ok {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.wpcf7-validation-errors {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* =====================================================
+   モバイル用スタイル (〜768px)
+   ===================================================== */
+@media (max-width: 768px) {
+  .form-table {
+    padding: 16px;
+  }
+
+  .form-row {
+    margin-top: 20px;
+  }
+
+  .wpcf7-radio,
+  .wpcf7-checkbox {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .date-group {
+    padding: 12px;
+  }
+
+  .date-select-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .date-select-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .date-label {
+    flex-shrink: 0;
+    min-width: 40px;
+    font-size: 14px !important;
+    order: 2;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: 8px !important;
+  }
+
+  .date-select-item .wpcf7-form-control-wrap {
+    order: 1;
+    width: auto !important;
+    max-width: 200px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .date-select-item select {
+    width: auto !important;
+    max-width: 180px !important;
+    min-width: 100px !important;
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+  }
+
+  .form-row:has([name="lesson-course"]) .wpcf7-radio,
+  .form-row:has([name="lesson-course-shimamoto"]) .wpcf7-radio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   PC用スタイル (769px〜)
+   ===================================================== */
+@media (min-width: 769px) {
+  .date-select-container {
+    gap: 20px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .date-select-item {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  .date-label {
+    order: 2;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 年、月、日の選択ボックス */
+  .date-select-item:nth-child(1) .wpcf7-form-control-wrap,
+  .date-select-item:nth-child(2) .wpcf7-form-control-wrap,
+  .date-select-item:nth-child(3) .wpcf7-form-control-wrap {
+    order: 1;
+    width: 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .date-select-item:nth-child(1) .wpcf7-form-control.wpcf7-select,
+  .date-select-item:nth-child(2) .wpcf7-form-control.wpcf7-select,
+  .date-select-item:nth-child(3) .wpcf7-form-control.wpcf7-select {
+    width: 80px !important;
+    max-width: 80px !important;
+    min-width: 80px !important;
+    font-size: 14px !important;
+    padding: 8px 4px !important;
+  }
+
+  /* コースの選択ボックス（4番目）*/
+  .date-select-item:nth-child(4) .wpcf7-form-control-wrap {
+    order: 1;
+    width: 180px !important;
+    max-width: 180px !important;
+    min-width: 180px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .date-select-item:nth-child(4) .wpcf7-form-control.wpcf7-select {
+    width: 180px !important;
+    max-width: 180px !important;
+    min-width: 180px !important;
+    font-size: 14px !important;
+    padding: 8px 6px !important;
+  }
+
+  /* コースのラベル */
+  .date-select-item:nth-child(4) .date-label {
+    min-width: 35px !important;
+  }
+}
+
+/* ========================================
+   性別フィールドの余白コントロール
+   ======================================== */
+
+/* 基本のラジオボタンとチェックボックスのスタイル */
+.contact-form__radio,
+.contact-form__checkbox {
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 8px !important;
+}
+
+/* フォームラベル全般のスタイル（spanタグ用） */
+.form-label {
+  display: block;
+  margin: 0 !important;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+/* 最強の優先度でラベルとラジオボタンの間隔を調整 */
+.form-table .form-row .form-label + .contact-form__radio,
+.form-table .form-row label[for] + .contact-form__radio,
+.form-table .form-row > .form-label + .contact-form__radio,
+.form-table .form-row > label[for] + .contact-form__radio {
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Contact Form 7が生成するwrapperの余白をリセット */
+.form-table .form-row .contact-form__radio .wpcf7-form-control-wrap {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Contact Form 7のラジオボタン自体の余白もリセット */
+.form-table .form-row .contact-form__radio .wpcf7-form-control.wpcf7-radio {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 最強の優先度で性別ラベルとラジオボタンの間隔を調整 */
+.form-table .form-row label.form-label + .contact-form__radio,
+.form-table .form-row label.form-label + span.contact-form__radio,
+div.form-row label.form-label + span.contact-form__radio,
+.form-row label[for="your-gender2"] + .contact-form__radio {
+  margin-top: 4px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 最も具体的なセレクタで余白を強制的に調整 */
+body
+  .form-table
+  .form-row
+  label.form-label[for="your-gender2"]
+  + span.contact-form__radio {
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* チェックボックスの余白も同様に調整 */
+body .form-table .form-row label[for="know-us"] + span.contact-form__checkbox {
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* 全てのチェックボックス（汎用） */
+body .form-table .form-row label[for] + span.contact-form__checkbox {
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* ========================================
+   セレクトボックスの高さを他の要素と統一
+   ======================================== */
+
+/* Contact Form 7のセレクトボックスの高さ調整 */
+.form-table
+  .form-row
+  .wpcf7-form-control-wrap
+  select.wpcf7-form-control.wpcf7-select,
+.form-table .form-row select.wpcf7-form-control.wpcf7-select,
+.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required,
+select[name="your-subject"] {
+  padding: 8px !important;
+  font-size: 16px !important;
+  height: auto !important;
+  min-height: 44px !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+}

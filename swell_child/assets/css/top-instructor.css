@@ -1,0 +1,33 @@
+/* トップページの講師カードエリア*/
+.p-postList.-type-card {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+/* トップページの講師カード */
+.p-postList__item.instructor-item {
+  max-width: 260px;
+}
+.p-postList__item.instructor-item .c-postThumb__figure {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+	border-radius: 8px;
+}
+.p-postList__item.instructor-item .p-postList__body{
+	padding: 10px;
+}
+
+
+/*instructor用だけ縦長2:3（トップページ用・SWELLの標準構造） */
+/* .instructor-item .c-postThumb__figure {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+
+} */
+
+/* .instructor-item .c-postThumb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */

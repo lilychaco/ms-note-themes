@@ -1,0 +1,19 @@
+/* 外部リンクの遷移問題修正用CSS */
+a[href*=".pdf"],
+a[href*="docs.google.com"],
+a[href*="ms-note.com"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: inline !important;
+    /* text-decoration: underline !important; */
+}
+
+/* 吹奏楽ページ特有の問題に対応 */
+.postid-108 a[href^="http"]:not([href*="/music-note-test20250604"]) {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+/* 担当講師カードのリンク修正 - JavaScriptで根本解決済み */

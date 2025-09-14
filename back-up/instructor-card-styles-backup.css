@@ -1,0 +1,173 @@
+/*
+ * 講師カード専用スタイル（不要・重複のためバックアップ）
+ * instructor-styles.cssと重複している内容
+ * 作成日: 2025年1月（バックアップ移動）
+ */
+
+/* 講師専用ページのみに適用（他のカードに影響しない） */
+
+/* 講師アーカイブページ専用 */
+/* .post-type-archive-instructor .p-postList,
+.tax-instructor_school .p-postList,
+.tax-instructor_subject .p-postList,
+.single-instructor .p-postList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+} */
+
+/* 関連記事（他講師）専用 */
+/* .p-relatedPosts,
+.l-articleBottom.-related .p-postList,
+.single-instructor .p-relatedPosts,
+.single-instructor .l-articleBottom .p-postList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+} */
+
+/* 講師専用ページの画像スタイル */
+/* .post-type-archive-instructor .p-postList__thumb,
+.tax-instructor_school .p-postList__thumb,
+.tax-instructor_subject .p-postList__thumb,
+.single-instructor .p-postList__thumb,
+.p-relatedPosts .c-postThumb,
+.l-articleBottom.-related .p-postList .c-postThumb,
+.single-instructor .p-relatedPosts .c-postThumb,
+.single-instructor .l-articleBottom .c-postThumb {
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+} */
+
+/* .post-type-archive-instructor .p-postList__thumb img,
+.tax-instructor_school .p-postList__thumb img,
+.tax-instructor_subject .p-postList__thumb img,
+.single-instructor .p-postList__thumb img,
+.p-relatedPosts .c-postThumb__img,
+.l-articleBottom.-related .p-postList .c-postThumb__img,
+.single-instructor .p-relatedPosts .c-postThumb__img,
+.single-instructor .l-articleBottom .c-postThumb__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+} */
+
+/* 講師専用ページのタイトル */
+.post-type-archive-instructor .p-postList__title,
+.tax-instructor_school .p-postList__title,
+.tax-instructor_subject .p-postList__title,
+.single-instructor .p-postList__title,
+.p-relatedPosts .c-postThumb__title,
+.l-articleBottom.-related .p-postList .p-postList__title,
+.single-instructor .p-relatedPosts .c-postThumb__title,
+.single-instructor .l-articleBottom .p-postList__title {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* 講師専用ページのホバー効果 */
+.post-type-archive-instructor .p-postList__item a,
+.tax-instructor_school .p-postList__item a,
+.tax-instructor_subject .p-postList__item a,
+.single-instructor .p-postList__item a,
+.p-relatedPosts .c-postThumb a,
+.l-articleBottom.-related .p-postList__item a,
+.single-instructor .p-relatedPosts a,
+.single-instructor .l-articleBottom .p-postList__item a {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.post-type-archive-instructor .p-postList__item a:hover,
+.tax-instructor_school .p-postList__item a:hover,
+.tax-instructor_subject .p-postList__item a:hover,
+.single-instructor .p-postList__item a:hover,
+.p-relatedPosts .c-postThumb a:hover,
+.l-articleBottom.-related .p-postList__item a:hover,
+.single-instructor .p-relatedPosts a:hover,
+.single-instructor .l-articleBottom .p-postList__item a:hover {
+  transform: translateY(-2px);
+}
+
+.post-type-archive-instructor .p-postList__item a:hover .p-postList__thumb,
+.tax-instructor_school .p-postList__item a:hover .p-postList__thumb,
+.tax-instructor_subject .p-postList__item a:hover .p-postList__thumb,
+.single-instructor .p-postList__item a:hover .p-postList__thumb,
+.p-relatedPosts .c-postThumb a:hover .c-postThumb,
+.l-articleBottom.-related .p-postList__item a:hover .c-postThumb,
+.single-instructor .p-relatedPosts a:hover .c-postThumb,
+.single-instructor .l-articleBottom .p-postList__item a:hover .c-postThumb {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 教室タグのスタイル（講師専用ページのみ） */
+.post-type-archive-instructor .p-postList__schools,
+.tax-instructor_school .p-postList__schools,
+.tax-instructor_subject .p-postList__schools,
+.single-instructor .p-postList__schools {
+  margin-top: 8px;
+}
+
+.post-type-archive-instructor .p-postList__school-tag,
+.tax-instructor_school .p-postList__school-tag,
+.tax-instructor_subject .p-postList__school-tag,
+.single-instructor .p-postList__school-tag {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+/* レスポンシブ対応（講師専用ページのみ） */
+@media (max-width: 768px) {
+  .post-type-archive-instructor .p-postList,
+  .tax-instructor_school .p-postList,
+  .tax-instructor_subject .p-postList,
+  .single-instructor .p-postList,
+  .p-relatedPosts,
+  .l-articleBottom.-related .p-postList,
+  .single-instructor .p-relatedPosts,
+  .single-instructor .l-articleBottom .p-postList {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .post-type-archive-instructor .p-postList,
+  .tax-instructor_school .p-postList,
+  .tax-instructor_subject .p-postList,
+  .single-instructor .p-postList,
+  .p-relatedPosts,
+  .l-articleBottom.-related .p-postList,
+  .single-instructor .p-relatedPosts,
+  .single-instructor .l-articleBottom .p-postList {
+    padding: 0 40px;
+  }
+}
+
+/*
+ * 注記：
+ * このファイルはinstructor-styles.cssと内容が重複していたため
+ * バックアップとして保存されました。
+ * 実際のスタイリングはinstructor-styles.cssで行われています。
+ */

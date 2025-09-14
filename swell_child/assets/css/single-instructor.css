@@ -1,0 +1,55 @@
+
+/* 講師個別ページのアイキャッチ画像 */
+.single-instructor .p-articleThumb {
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.single-instructor .p-articleThumb__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.single-instructor .p-articleThumb:hover .p-articleThumb__img {
+  transform: scale(1.05);
+}
+
+.single-instructor .l-mainContent__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.single-instructor .post_content {
+  text-align: center;
+}
+
+
+/* 関連記事の画像を顔中心に表示 */
+.single-instructor .p-relatedPosts .c-postThumb__img.u-obf-cover {
+  object-position: center 30%;
+}
+
+
+
+/* 他講師のカードエリア */
+.p-postList.p-relatedPosts.-type-card {
+	display: flex;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+	gap:0;/* トップページの講師カードエリアのgapを0にする*/
+}
+.p-postList.p-relatedPosts.-type-card .p-postList__item {
+	max-width: 220px;
+}

@@ -1,0 +1,191 @@
+.price-table {
+  margin-top: 40px;
+	max-width: 1024px;
+	margin-inline: auto;
+}
+
+.price-table__inner {
+  width: 100%;
+  overflow-x: auto;
+	margin-inline: auto;
+}
+
+.price-table__grid {
+margin-inline: auto;
+  display: grid;
+  grid-template-columns:
+    minmax(120px, max-content)
+    minmax(180px, 1fr)
+    minmax(60px, max-content)
+    minmax(60px, max-content)
+    minmax(90px, max-content)
+    minmax(80px, max-content)
+    minmax(100px, max-content);
+  width: 100%;
+	max-width: 1024px;
+  min-width: 700px;
+  border: 1px solid #333;
+}
+
+.price-table__header,
+.price-table__cell {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #333;
+  line-height: 1.6;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#fff;
+}
+
+.price-table__header {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #333;
+  line-height: 1.4;
+  background-color: #c4d600;
+  padding: 12px 6px;
+}
+
+.price-table__cell--price {
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.price-table__cell--rowspan-2 {
+  grid-row: span 2;
+}
+
+.price-table-piano .price-table__cell--rowspan-3 {
+  grid-row: span 3;
+}
+
+.price-table-piano .price-table__cell--rowspan-10 {
+  grid-row: span 10;
+}
+
+.price-table-piano .sp-br {
+  display: none;
+}
+.price-table-kahon .sp-br {
+	display: none;
+}
+
+@media screen and (max-width: 920px) {
+  .price-table {
+		width: 100%;
+    margin-top: 30px;
+  }
+
+  .price-table__header,
+  .price-table__cell {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #333;
+    line-height: 1.5;
+    padding: 8px 4px;
+  }
+
+  .price-table__header {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #333;
+    line-height: 1.3;
+    padding: 8px 3px;
+  }
+
+  .price-table__cell--price {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #333;
+    line-height: 1.5;
+    padding-right: 8px;
+  }
+
+  .sp-br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .price-table-piano {
+    margin-top: 20px;
+  }
+
+  .price-table__grid {
+    grid-template-columns:
+      70px
+      120px
+      40px
+      40px
+      60px
+      50px
+      70px;
+    min-width: 450px;
+  }
+
+.price-table__header,
+.price-table__cell {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #333;
+    line-height: 1.4;
+    padding: 6px 2px;
+  }
+
+.price-table__header {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #333;
+    line-height: 1.2;
+  }
+
+.price-table__cell--price {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #333;
+    line-height: 1.4;
+    padding-right: 6px;
+  }
+}
+
+	.price-table__cell--rowspan-2 {
+		grid-row: span 2;
+	}
+	.price-table__cell--rowspan-3 {
+		grid-row: span 3;
+	}
+	.price-table__cell--rowspan-4 {
+		grid-row: span 4;
+	}
+	.price-table__cell--rowspan-5 {
+  grid-row: span 5;
+}
+	.price-table__cell--rowspan-6 {
+  grid-row: span 6;
+}
+	.price-table__cell--rowspan-7 {
+  grid-row: span 7;
+}
+.price-table__cell--rowspan-11 {
+  grid-row: span 11;
+}

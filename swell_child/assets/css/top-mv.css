@@ -1,0 +1,35 @@
+.p-mainVisual {
+  height: 500px; /* 例：高さ500pxに制限 */
+  overflow: hidden;
+}
+
+.p-mainVisual img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.p-mainVisual__logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.p-mainVisual__logo img {
+  max-height: 300px;
+  height: 15vh;
+  width: auto;
+}
+/* レスポンシブ対応 */
+@media (max-width: 960px) {
+  .p-mainVisual__logo img {
+    max-height: 100px;
+    height: 10vh;
+    width: auto;
+  }
+	.p-mainVisual {
+  height: 300px; /* 例：高さ500pxに制限 */
+
+}
+}
