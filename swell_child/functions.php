@@ -186,6 +186,13 @@ get_stylesheet_directory_uri() . '/assets/css/archive-lesson.css',
 	[],
 	'1.0'
 	);
+	
+	//ヘッダー修正用スタイル
+	wp_enqueue_style('header-fix-styles',
+	get_stylesheet_directory_uri() . '/assets/css/header-fix.css',
+	[],
+	date('Ymdgis', filemtime(get_stylesheet_directory() . '/assets/css/header-fix.css'))
+	);
 
   }
   , 25);

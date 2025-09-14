@@ -1,0 +1,64 @@
+/* ヘッダーメニュー修正 - サーバー環境での表示問題対応 */
+
+/* グローバルナビゲーションの基本設定 */
+@media (min-width: 960px) {
+  .c-gnav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-wrap: nowrap;
+		gap:6px;
+  }
+
+  .c-gnav > .menu-item {
+    flex: 0 0 auto;
+    display: block;
+    height: 100%;
+  }
+
+  .c-gnav > .menu-item > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    white-space: nowrap;
+    padding: 0 12px;
+  }
+
+  /* 空のリンク（教室紹介など）も同じ高さに揃える */
+  .c-gnav > .menu-item > a[href=""],
+  .c-gnav > .menu-item > a[href="#"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: default;
+  }
+
+  /* ヘッダーレイアウトの適用 */
+  .-series .l-header__inner {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .-series .l-header__gnav {
+    display: flex;
+    align-items: center;
+  }
+
+  /* パラレル表示の場合 */
+  .-parallel .l-header__gnav {
+    width: 100%;
+  }
+
+  .-parallel .l-header__gnav .c-gnav {
+    justify-content: center;
+  }
+}
+
+/* モバイル表示での非表示 */
+@media (max-width: 959px) {
+  .l-header__gnav {
+    display: none;
+  }
+}
